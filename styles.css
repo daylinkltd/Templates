@@ -5,29 +5,37 @@ body, h1, p, ul, li {
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background: #f4f4f4;
     color: #333;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    background: #007BFF;
-    color: #fff;
-    padding: 20px 0;
+    background: url('https://res.cloudinary.com/dshrollx4/image/upload/v1724123510/logoLight_hfiiun.png') no-repeat center center/cover;
+    background: #053363;
+    color: black;
+    padding: 10px;
     text-align: center;
 }
 
+header .logo {
+    max-width: 150px;
+    margin-top: 20px;
+}
+
 header h1 {
-    margin-bottom: 10px;
     font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
 header p {
@@ -35,14 +43,21 @@ header p {
 }
 
 main {
+    background: black;
+
+    flex: 1;
+    color: #fff;
     padding: 20px 0;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding: 60px 0;
 }
 
 nav li {
@@ -53,10 +68,11 @@ nav a {
     text-decoration: none;
     color: #007BFF;
     font-size: 1.2rem;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: 2px solid #007BFF;
     border-radius: 5px;
     transition: background 0.3s, color 0.3s;
+    display: inline-block;
 }
 
 nav a:hover {
@@ -65,12 +81,35 @@ nav a:hover {
 }
 
 footer {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
+    background: #053363;
+    color: white;
+    padding: 0px 0;
     text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+footer .container {
+    width: 90%;
+    margin: 0 auto;
 }
 
 footer p {
     font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
 }
